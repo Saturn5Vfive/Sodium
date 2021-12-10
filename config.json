@@ -1,0 +1,15 @@
+{
+  "token": "PUT YOUR TOKEN HERE",
+  "insults": ["you suck", "recked", "trash belongs in the bin", "clown down"],
+  "raid":
+  {
+    "heading": "SODIUM",
+    "body": "sodium best raidbot",
+    "url": "https://www.youtube.com/watch?v=QtBDL8EiNZo&ab_channel=Rickrollingnoads",
+    "image_url": "https://media.discordapp.net/attachments/903486840840011788/905801609169215518/honestlyquiteincredible.gif"
+  },
+  "whitelist":[
+    
+  ],
+  "delete-embeds": true
+}
