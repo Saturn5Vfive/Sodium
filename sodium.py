@@ -182,7 +182,7 @@ async def on_message(message):
                 last.append(a)
             elif arr[1] == "misc":
                 embed = naembed("Sodium",
-                                "Misc:\n\nascii [text] - make text big\nrandom [unicode/ascii] [amount] - print some random stuff\nrepeat [amount] [string] - repeat a string an amount\nsniper [enable/disable] - enable or disable discord nitro sniper\nhide [normal text] | [hidden text] - hide some text\nnitro [link] - create a fake nitro message\nstream [link] [text] - fake streaming on twitch\nstatus [playing/watching/listening] [text] - set your discord status\nlog [text] - log some text to the logging channel\nspmove [amount] - spam leave and join the vc you are currently connected to\navatar [mention] - get a users avatar")
+                                "Misc:\n\nascii [text] - make text big\nrandom [unicode/ascii] [amount] - print some random stuff\nrepeat [amount] [string] - repeat a string an amount\nsniper [enable/disable] - enable or disable discord nitro sniper\nhide [normal text] | [hidden text] - hide some text\nnitro [link] - create a fake nitro message\nstream [link] [text] - fake streaming on twitch\nstatus [playing/watching/listening] [text] - set your discord status\nlog [text] - log some text to the logging channel\nspmove [amount] - spam leave and join the vc you are currently connected to\navatar [mention] - get a users avatar\nembed [title] [contents] - send a discord embed")
                 a = await message.channel.send(embed=embed)
                 last.append(a)
             elif arr[1] == "minecraft":
@@ -200,7 +200,9 @@ async def on_message(message):
                                 "Moderation:\n\nban [mention] - ban a member\nkick [mention] - kick a member\ndelete [mention] [amount] - delete a amount of messages from a user\npurge [amount] - purge the chat\nspurge [amount] [user] - purges from a specific person")
                 a = await message.channel.send(embed=embed)
                 last.append(a)
-
+    if arr[0] == "~embed":
+        embed = discord.Embed(title=arr[0], description=arr[1])
+        await message.channel.send(embed=embed)
     if arr[0] == "~kick":
         user = message.mentions[0]
         await user.kick()
